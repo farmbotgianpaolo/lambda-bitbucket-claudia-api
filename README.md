@@ -61,6 +61,16 @@ This node application has the following features:
 
 ### HOW THIS API WORKS:
 
+```
+
+--> local.js ----|
+                 |                                  |--> OUTPUT
+                 |--> app.js --> app/route/index.js |
+                 |                                  |--> app/controller/example.js --> OUTPUT
+--> lambda.js ---|
+
+```
+
 The main script launched on __local.js__ (or on __lambda.handler__ if on lambda) instantiates an Express application that will require a router on `app/route/index.js`. The router script has 2 routes. The main route `"/"` answers with the following json: 
 
 ```javascript
