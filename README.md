@@ -34,9 +34,9 @@ This Node.JS application has the following features:
   * http://localhost:3030/example
 
 
-### HOW THIS API WORKS IN LOCAL:
+### HOW THIS API WORKS:
 
-The main script launched on local.js instantiates an Express application that will require a router on `app/route/index.js`. 
+The main script launched on local.js (or on lambda.handler if on lambda) instantiates an Express application that will require a router on `app/route/index.js`. 
 The router script has sa main route `"/"` that answers with the following json: 
 
 ```javascript
@@ -51,16 +51,18 @@ It also addresses all the requests starting with `"/example"` to a controller on
 
 ## HOW TO RUN THE API ON LAMBDA
 
-This API works on a very basic Lambda environment setup:
+This API works on a very simple Lambda environment setup:
 
 * Runtime: Node 8.10 (but also on 6.10)
 * Handler: lambda.handler
 
-As said in the INTRO the purpose of this example is to show how to deploy it on a __PRE-EXISTING__ lambda function not created directly using "claudia create" command.
+As explained in the INTRO the purpose of this example is to show how to deploy it on a __PRE-EXISTING__ lambda function not created  using ` claudia create ` command.
 So let's assume you already have deployed it manually on lambda (just zipping this folder and put it on Lambda dashboard on AWS console).
 
 Lambda will use a different script for running the application. In local we run it from "local.js"; on Lambda we inform lambda that the handler is on lambda.js file. And this file uses the magnificient __aws-serverless-express__ module to make express able to be run from Lambda. You can use both scripts (local.js and lambda.js) as they are on your own application without the need to change them.
 And that's because the real application (in common with the 2 "launchers") is on app.js! (as a any old node applications!)
+
+So, both launchers require app.js to work, and this make this app runnable both on traditional servers ( `node local.js` ) and on lambda (requiring `lambda.handler` as handler).
 
 
 
