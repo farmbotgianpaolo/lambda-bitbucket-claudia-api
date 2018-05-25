@@ -60,10 +60,14 @@ As explained in the INTRO the purpose of this example is to show how to deploy i
   
 So the first deployment of this requires you to deploy it manually (just zipping this folder and put it on Lambda dashboard on AWS console).
  
-Lambda will use a different script for running the application. In local we run it from "local.js"; on Lambda we inform lambda that the handler is on lambda.js file. And this file uses the magnificient __aws-serverless-express__ module to make express able to be run from Lambda. You can use both scripts (local.js and lambda.js) as they are on your own application without the need to change them.
-And that's because the real application (in common with the 2 "launchers") is on app.js! (as a any old node applications!)
+Lambda will use a different script for running the application. In local we run it from "local.js"; on Lambda we inform it that the handler is on lambda.js file. And this file uses the great __aws-serverless-express__ module to make Express.JS able to be used on Lambda. Both launcher scripts (local.js and lambda.js) are agnostic about your own application. So they can be a useful way to transform  your own pre-existing Express app into a serverless app, without the need to change your code.
+Just copy the files on your project and be sure that your express application bootstrap is called app.js.
+
+That's because the real application (in common with the 2 "launchers") is on app.js! The launchers refer both to it.
 
 So, both launchers require app.js to work, and this make this app runnable both on traditional servers ( `node local.js` ) and on lambda (requiring `lambda.handler` as handler).
+
+
 
 
 
