@@ -13,4 +13,10 @@ This Node.JS application has the following features:
 - It uses Claudia.JS for updating it on a pre existing Lambda Function (so to demonstrate how it is possible to apply Claudia to a pre-existing work without the need to create a new Lambda function)
 - It uses Bitbucket as main repository (also if I published it here on Github for making it available to the public)
 - It has a preconfigured (and working!) Bitbucket Pipeline that uses Claudia directly from Bitbucket pipelines.
+- It also provides a very useful claudia.json file where you can find how to properly configure this app for your AWS Lambda with your own credentials.
 
+## HOW TO RUN THE API LOCALLY
+- You need to have Node.JS pre-installed on your system
+- clone or copy the this repository, open a terminal on its folder and run:
+`npm install`
+`node local.js`
