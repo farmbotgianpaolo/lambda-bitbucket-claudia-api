@@ -1,9 +1,10 @@
 # lambda-bitbucket-claudia-api
-A small API example made on __Node.JS__ and __Express__, setup for being deployed on a pre-existing __Lambda__ Function working on a AWS __API Gateway__, using __Claudia.JS__
+A small API example made on __Node.JS__ and __Express__, ready for being deployed on a __pre-existing Lambda__ function working on a AWS __API Gateway__. The deployment will use __Claudia.JS__ directly from __Bitbucket__ repositories and pipelines.
 
 ## INTRO
 I created this example API because all the other examples I could find on the web were not complete or not working.
 I needed a solution for updating an __existing__ Lambda API maintained on a __Bitbucket__ repository, working on Node.JS and Express.
+So the natural choice was to apply Claudia.js for it. After I succeeded on this purpose I created this simplified version for explaining how to achieve the same purpose on your own existing projects maintained on Bitbucket.
 
 ## FEATURES
 This Node.JS application has the following features:
@@ -36,8 +37,7 @@ This Node.JS application has the following features:
 
 ### HOW THIS API WORKS:
 
-The main script launched on local.js (or on lambda.handler if on lambda) instantiates an Express application that will require a router on `app/route/index.js`. 
-The router script has sa main route `"/"` that answers with the following json: 
+The main script launched on __local.js__ (or on __lambda.handler__ if on lambda) instantiates an Express application that will require a router on `app/route/index.js`. The router script has 2 routes. The main route `"/"` answers with the following json: 
 
 ```javascript
 {
@@ -46,7 +46,14 @@ The router script has sa main route `"/"` that answers with the following json:
 }
 ```
 
-It also addresses all the requests starting with `"/example"` to a controller on app/controller/example.js
+The second one `"/example"` is sent to a controller on app/controller/example.js that will manage its own subroutes and at the moment it has only the base subroute that will answer with:
+
+```javascript
+{
+"result": 1,
+"message": "example controller"
+}
+```
 
 
 ## HOW TO RUN THE API ON LAMBDA
