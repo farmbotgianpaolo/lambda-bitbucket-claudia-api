@@ -74,8 +74,24 @@ That's because the real application (in common with the 2 "launchers") is on app
 
 So, both launchers require app.js to work, and this make this app runnable both on traditional servers ( `node local.js` ) and on lambda (requiring `lambda.handler` as handler).
 
+## BITBUCKET SETUP
 
+This example can be put on a __Bitbucket__ repository where you have to __setup 2 environment variables__ (go on your repo, then on "settings" and then on "environment variables"):
 
+AWS_ACCESS_KEY_ID
+
+AWS_SECRET_ACCESS_KEY
+
+The pipeline script will use them for correctly configuring Claudia.JS. Follow this guide for setting up a IAM user for Claudia: https://claudiajs.com/tutorials/installing.html 
+
+Now, because we don't use the "claudia create" command (because we assume that your API is still up and running on Lambda and API Gateway), we need to have a __claudia.json__ file already configured for making claudia correctly working with its "update" command.
+In this example you can find it. Just open it and substitute the parts with your own:
+
+* name: your lambda function name (the exact name you have on your lambda function)
+* role: usually it is the lambda function name with "-executor" suffix (check the claudia.json file to find an example)
+* region: your lambda function aws region
+* id: the API GATEWAY id (not the lambda id) that can be found on the API gateway associated with your lambda function, looking up on the breadcrumbs in brackets
+* url: the API Gateway public url of your existing API
 
 
 
