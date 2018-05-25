@@ -28,8 +28,8 @@ This Node.JS application has the following features:
 ` LAMBDA API EXAMPLE WORKING ON 3030 `
 
 - Then you can open your browser and check the 2 routes on it:
--- `http://localhost:3030/`
--- `http://localhost:3030/example`
+⋅⋅ http://localhost:3030/
+⋅⋅ http://localhost:3030/example
 
 ### HOW THIS API WORKS IN LOCAL:
 
