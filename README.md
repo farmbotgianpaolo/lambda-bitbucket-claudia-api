@@ -57,8 +57,9 @@ This API works on a very simple Lambda environment setup:
 * Handler: lambda.handler
 
 As explained in the INTRO the purpose of this example is to show how to deploy it on a __PRE-EXISTING__ lambda function not created  using ` claudia create ` command.
-So let's assume you already have deployed it manually on lambda (just zipping this folder and put it on Lambda dashboard on AWS console).
-
+  
+So the first deployment of this requires you to deploy it manually (just zipping this folder and put it on Lambda dashboard on AWS console).
+ 
 Lambda will use a different script for running the application. In local we run it from "local.js"; on Lambda we inform lambda that the handler is on lambda.js file. And this file uses the magnificient __aws-serverless-express__ module to make express able to be run from Lambda. You can use both scripts (local.js and lambda.js) as they are on your own application without the need to change them.
 And that's because the real application (in common with the 2 "launchers") is on app.js! (as a any old node applications!)
 
