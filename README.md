@@ -16,22 +16,22 @@ This Node.JS application has the following features:
 - It also provides a very useful claudia.json file where you can find how to properly configure this app for your AWS Lambda with your own credentials.
 
 ## HOW TO RUN THE API LOCALLY
-- You need to have Node.JS pre-installed on your system
-- clone or copy the this repository, open a terminal on its folder and run:
+* You need to have Node.JS pre-installed on your system
+* clone or copy the this repository, open a terminal on its folder and run:
 
 ` > npm install `
 
 ` > node local.js `
 
-- The server will start with the following console output:
+* The server will start with the following console output:
 
 ` LAMBDA API EXAMPLE WORKING ON 3030 `
 
-- Then you can open your browser and check the 2 routes on it:
+* Then you can open your browser and check the 2 routes on it:
 
-⋅⋅ http://localhost:3030/
+  * http://localhost:3030/
 
-⋅⋅ http://localhost:3030/example
+  * http://localhost:3030/example
 
 
 ### HOW THIS API WORKS IN LOCAL:
