@@ -18,5 +18,8 @@ This Node.JS application has the following features:
 ## HOW TO RUN THE API LOCALLY
 - You need to have Node.JS pre-installed on your system
 - clone or copy the this repository, open a terminal on its folder and run:
+
+
 `npm install`
+
 `node local.js`
