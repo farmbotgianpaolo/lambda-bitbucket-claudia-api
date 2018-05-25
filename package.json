@@ -1,0 +1,20 @@
+{
+  "name": "EXAMPLE_API",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"deploy": "TMPDIR=/tmp claudia update --version prod --set-env LOCAL_DEV=false --timeout 30 --profile claudia"
+  },
+  "author": "Gianpaolo Papa",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.235.1",
+    "aws-serverless-express": "^3.2.0",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "claudia": "^4"
+  }
+}

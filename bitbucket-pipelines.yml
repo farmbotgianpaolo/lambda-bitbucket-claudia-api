@@ -1,0 +1,13 @@
+image: node:8
+
+pipelines:
+  default:
+    - step:
+        name: Build and push to Lambda
+        script:
+          - apt-get update
+          - apt-get install -y python-dev
+          - chmod +x pre-deploy.py
+          - python pre-deploy.py $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY
+          - npm install claudia -g
+          - TMPDIR=/tmp claudia update --version prod --set-env LOCAL_DEV=false --timeout 30 --profile claudia

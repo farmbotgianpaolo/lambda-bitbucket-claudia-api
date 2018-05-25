@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "name": "EXAMPLE_API",
+    "role": "EXAMPLE_API-executor",
+    "region": "YOUR_LAMBDA_FUNCTION_REGION"
+  },
+  "api": {
+    "id": "YOUR_API_ID",
+    "url": "YOUR_AMAZON_API_PUBLIC_PATH"
+  }
+}
