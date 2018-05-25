@@ -7,11 +7,11 @@ I needed a solution for updating an __existing__ Lambda API maintained on a __Bi
 So the natural choice was to apply Claudia.js for it. After I succeeded on this purpose I created this simplified version for explaining how to achieve the same purpose on your own existing projects maintained on Bitbucket.
 
 ## FEATURES
-This Node.JS application has the following features:
+This node application has the following features:
 - It's a simple JSON REST API made on Express, with __2 routes__
 - It works both in local or on a traditional machine (on port 3030) and in Lambda as well
 - It has a simple Controller addressed by the router
-- It uses __Claudia.JS__ for deploying it on a pre existing Lambda Function (so to demonstrate how it is possible to apply Claudia to a pre-existing work without the need to create a new Lambda function)
+- It uses __Claudia.JS__ for deploying itself on a pre existing Lambda Function (so to demonstrate how it is possible to apply Claudia to a pre-existing work without the need to create a new Lambda function)
 - It uses Bitbucket as main repository (also if I published it here on Github for making it available to the public)
 - It has a preconfigured (and working!) Bitbucket Pipeline that makes Claudia able to be launched directly from Bitbucket pipelines.
 - It also provides a very useful __claudia.json__ file where you can find how to properly configure this app for your AWS Lambda with your own credentials.
