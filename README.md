@@ -94,6 +94,30 @@ In this example you can find it. Just open it and substitute the parts with your
 * url: the API Gateway public url of your existing API
 
 
+## HOW THE bitbucket-pipelines.yml WILL DEPLOY ON YOUR LAMBDA
+
+Now that you have everything configured on your bitbucket repository, the pipeline will start automatically the deployment with the following commands I put on the yml file:
+
+* `apt-get update`
+* this will just update the bitbucket environment
+* `apt-get install -y python-dev`
+* this will install python that is required to launch the following python script
+* `chmod +x pre-deploy.py`
+* `python pre-deploy.py $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY`
+* this command will launch the script called pre-deploy.py that basically performs one operation mandatory for claudia.js: to have the AWS credentials available where she thinks they should be: on /HOMEDIR/.aws/credentials. So this script will create a temp file in this virtual location on Bitbucket. This is important because claudia.js has been created to easily deploy from a server or a local PC, not from a Bitbucket repo. 
+* `npm install claudia -g`
+* this command installs claudia globally on the bitbucket deployment environment
+* `TMPDIR=/tmp claudia update --version prod --set-env LOCAL_DEV=false --timeout 30 --profile claudia`
+* finally we launch the "claudia update" command to send the app to lambda.
+
+If the pipeline doesn't give errors it will output a json with the operations performed 
+
+---------------------------------------------
+---------------------------------------------
+
+This project is based on: https://github.com/MEGApixel23/claudia-bitbucket-pipelines that unfortunately does't work.
+Hope it will help someone to not waste hours as I had to.
+
 
 
 
