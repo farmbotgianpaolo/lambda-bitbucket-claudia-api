@@ -20,9 +20,7 @@ This Node.JS application has the following features:
 - clone or copy the this repository, open a terminal on its folder and run:
 
 
-`
-> npm install
+` > npm install `
 
-> node local.js
+` > node local.js `
 
-`
