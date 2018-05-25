@@ -35,4 +35,19 @@ and
 
 `http://localhost:3030/example`
 
+### HOW THIS API WORKS IN LOCAL:
+
+The main script launched on local.js instantiates an Express application that will require a router on `app/route/index.js`. 
+The router script has sa main route `"/"` that answers with the following json: 
+
+```javascript
+{
+"result": 1,
+"message": "Base Path"
+}
+```
+
+It also addresses all the requests starting with `"/example"` to a controller on app/controller/example.js
+
+
 
