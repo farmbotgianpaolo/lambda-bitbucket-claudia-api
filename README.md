@@ -25,7 +25,7 @@ This Node.JS application has the following features:
 
 * The server will start with the following console output:
 
-  * ` LAMBDA API EXAMPLE WORKING ON 3030 `
+  * > LAMBDA API EXAMPLE WORKING ON 3030
 
 * Then you can open your browser and check the 2 routes on it:
 
