@@ -71,7 +71,7 @@ This node application has the following features:
 
 ```
 
-The main script launched on __local.js__ (or on __lambda.handler__ if on lambda) instantiates an Express application that will require a router on `app/route/index.js`. The router script has 2 routes. The main route `"/"` answers with the following json: 
+The main script launched on __local.js__ (or on __lambda.handler__ if on lambda) instantiates an Express application (on __app.js__) that will call a router on __app/route/index.js__. The router has 2 routes on it. One `"/"` answers with the following json: 
 
 ```javascript
 {
@@ -80,7 +80,7 @@ The main script launched on __local.js__ (or on __lambda.handler__ if on lambda)
 }
 ```
 
-The second one `"/example"` is sent to a controller on app/controller/example.js that will manage its own subroutes and at the moment it has only the base subroute that will answer with:
+The second one `"/example"` is sent to a controller on __app/controller/example.js__ that will manage its own subroutes. At the moment it has only the base subroute that will answer with:
 
 ```javascript
 {
