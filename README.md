@@ -19,8 +19,20 @@ This Node.JS application has the following features:
 - You need to have Node.JS pre-installed on your system
 - clone or copy the this repository, open a terminal on its folder and run:
 
-
 ` > npm install `
 
 ` > node local.js `
+
+- The server will start with the following console output:
+
+` LAMBDA API EXAMPLE WORKING ON 3030 `
+
+- Then you can open your browser and check the 2 routes on it:
+
+`http://localhost:3030/`
+
+and
+
+`http://localhost:3030/example`
+
 
