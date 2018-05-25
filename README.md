@@ -16,6 +16,31 @@ This node application has the following features:
 - It has a preconfigured (and working!) Bitbucket Pipeline that makes Claudia able to be launched directly from Bitbucket pipelines.
 - It also provides a very useful __claudia.json__ file where you can find how to properly configure this app for your AWS Lambda with your own credentials.
 
+## STRUCTURE
+
+```
+
+|-- app
+|   |-- controller
+|   |    |-------- example.js
+|   |
+|   |-- route
+|        |-------- index.js
+|
+|-- app.js
+|-- bitbucket-pipelines.yml
+|-- claudia.json
+|-- lambda.js
+|-- local.js
+|-- local.js
+|-- package.json
+|-- pre-deploy.py
+|-- README.md
+
+```
+
+
+
 ## HOW TO RUN THE API LOCALLY
 * (_You need to have Node.JS pre-installed on your system_)
 * Clone or copy this repository, then open a terminal on its folder and run:
