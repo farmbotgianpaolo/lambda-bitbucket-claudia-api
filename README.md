@@ -32,7 +32,6 @@ This node application has the following features:
 |-- claudia.json
 |-- lambda.js
 |-- local.js
-|-- local.js
 |-- package.json
 |-- pre-deploy.py
 |-- README.md
